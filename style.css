@@ -33,7 +33,7 @@ body {
   position: relative;
   background: white;
   width: 400px;
-  height: 450px%;
+  height: 450px;
   border-radius: 20px;
   overflow: hidden;
   margin: 90px auto;
@@ -50,12 +50,6 @@ body {
 .card__content {
   display: flex;
   justify-content: center;
-}
-
-.user {
-}
-
-.user-info {
 }
 
 .avatar {
