@@ -1,14 +1,22 @@
-* {
-  margin: 0;
-  padding: 0;
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   height: 100vh;
   font-family: "kumbh Sans", sans-serif;
   background-color: hsl(185, 75%, 39%);
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   text-align: center;
 }
@@ -32,11 +40,18 @@ body {
 .container {
   position: relative;
   background: white;
-  width: 400px;
-  min-height: 420px;
+  width: 20.5rem;
+  min-height: 23.5rem;
   border-radius: 20px;
   overflow: hidden;
   margin: 90px auto;
+  text-align: center;
+}
+
+.container h1,
+.container h2,
+.container p {
+  margin-top: 0;
 }
 
 .card__header {
@@ -49,14 +64,16 @@ body {
 
 .card__content {
   display: flex;
+  margin-top: 4rem;
   justify-content: center;
 }
 
 .avatar {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 7px solid white;
-  position: relative;
-  top: -60px;
 }
 
 .card__name {
@@ -67,21 +84,24 @@ body {
 }
 .card__age {
   font-weight: normal;
-  color: hsl(227, 10%, 46%);
+  color: rgba(60, 60, 64, 0.5);
   margin-left: 5px;
 }
 
 .card__location {
-  color: hsl(229, 9%, 65%);
-  margin: 10px 0px 25px 0px;
+  color: rgba(60, 60, 64, 0.5);
+  margin-bottom: 1.5625rem;
+  font-weight: normal;
+}
+
+.card__line {
+  border-top: 1px solid rgba(60, 60, 64, 0.5);
+  margin-bottom: 1.5625rem;
 }
 
 .card__footer {
   display: flex;
   justify-content: space-evenly;
-  text-align: center;
-  border-top: 1px solid #d8d9df;
-  padding-top: 50px;
 }
 
 .card__qty {
@@ -93,6 +113,8 @@ body {
   font-size: 12px;
   color: rgba(60, 60, 64, 0.5);
   letter-spacing: 1px;
+  margin-bottom: 2rem;
+
 }
 
 .attribution {
