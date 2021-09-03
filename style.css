@@ -1,5 +1,6 @@
 html {
   font-size: 100%;
+  font-family: "kumbh Sans", sans-serif;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -12,18 +13,16 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  display: flex;
   height: 100vh;
-  font-family: "kumbh Sans", sans-serif;
   background-color: hsl(185, 75%, 39%);
-  justify-content: center;
-  text-align: center;
+  align-items: center;
+
 }
 
 .bg-top,
 .bg-bottom {
-  width: 600px;
+  width: 700px;
   position: absolute;
   z-index: -1;
 }
@@ -37,21 +36,24 @@ body {
   left: 50%;
   bottom: -180px;
 }
-.container {
-  position: relative;
+
+/* Card itself */
+
+.card {
   background: white;
-  width: 20.5rem;
-  min-height: 23.5rem;
-  border-radius: 20px;
+  width: 326px;
+  min-height: 375px;
+  border-radius: 18px;
   overflow: hidden;
-  margin: 90px auto;
-  text-align: center;
+  margin: auto;
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.205);
+  align-items: center;
+
 }
 
-.container h1,
-.container h2,
-.container p {
-  margin-top: 0;
+.card__content {
+  text-align: center;
+  margin: 0px;
 }
 
 .card__header {
@@ -62,22 +64,17 @@ body {
   width: 100%;
 }
 
-.card__content {
-  display: flex;
-  margin-top: 4rem;
-  justify-content: center;
-}
-
+/* Photo */
 .avatar {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  position: relative;
+  transform: translateY(-50%);
   border-radius: 50%;
   border: 7px solid white;
 }
 
+/* Stats */
+
 .card__name {
-  margin-top: -30px;
   font-size: 22px;
   font-weight: bold;
   color: hsl(229, 23%, 23%);
@@ -85,27 +82,24 @@ body {
 .card__age {
   font-weight: normal;
   color: rgba(60, 60, 64, 0.5);
-  margin-left: 5px;
 }
 
 .card__location {
   color: rgba(60, 60, 64, 0.5);
-  margin-bottom: 1.5625rem;
   font-weight: normal;
 }
 
 .card__line {
   border-top: 1px solid rgba(60, 60, 64, 0.5);
-  margin-bottom: 1.5625rem;
 }
 
 .card__footer {
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
 }
 
-.card__qty {
-  font-weight: bold;
+.card__number {
   font-size: 22px;
 }
 
@@ -114,11 +108,14 @@ body {
   color: rgba(60, 60, 64, 0.5);
   letter-spacing: 1px;
   margin-bottom: 2rem;
-
 }
+
+/* Footer text outside of box */
 
 .attribution {
   color: white;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .rev {
